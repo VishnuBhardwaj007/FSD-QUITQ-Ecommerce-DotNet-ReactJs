@@ -1,0 +1,33 @@
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-container button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-container button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,7 @@
+.cat{
+    display: flex;
+}
+@media screen and (max-width:528px) {
+    .cat{
+        flex-direction: column;
+    }}

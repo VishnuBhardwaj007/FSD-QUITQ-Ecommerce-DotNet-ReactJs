@@ -1,0 +1,31 @@
+.address-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .address-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .address-details {
+    padding-left: 30px;
+  }
+  .button-container{
+    display: flex;
+    gap:5px;
+    margin-top: 6px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .address-container {
+      padding: 10px;
+    }
+    
+    .address-item {
+      padding: 15px;
+    }
+  }
+  

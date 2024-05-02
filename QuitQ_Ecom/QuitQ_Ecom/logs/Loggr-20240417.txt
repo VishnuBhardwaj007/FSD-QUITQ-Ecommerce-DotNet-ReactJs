@@ -1,0 +1,1285 @@
+2024-04-17 15:51:34.876 +05:30 [INF] User profile is available. Using 'C:\Users\mirza\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-17 15:51:36.115 +05:30 [INF] Now listening on: https://localhost:7036
+2024-04-17 15:51:36.115 +05:30 [INF] Now listening on: http://localhost:5228
+2024-04-17 15:51:36.120 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-17 15:51:36.120 +05:30 [INF] Hosting environment: Development
+2024-04-17 15:51:36.121 +05:30 [INF] Content root path: C:\Users\mirza\Downloads\QuitQ_Ecom_I\QuitQ_Ecom\QuitQ_Ecom\
+2024-04-17 15:51:38.849 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - -
+2024-04-17 15:51:39.562 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - - - 200 - text/html;charset=utf-8 717.4857ms
+2024-04-17 15:51:39.571 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - -
+2024-04-17 15:51:39.585 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 13.7324ms
+2024-04-17 15:51:39.767 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - -
+2024-04-17 15:51:39.957 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 189.6982ms
+2024-04-17 15:51:40.252 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - -
+2024-04-17 15:51:40.675 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 422.9041ms
+2024-04-17 15:51:54.106 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 15:51:54.120 +05:30 [INF] CORS policy execution successful.
+2024-04-17 15:51:54.269 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 15:51:54.321 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 15:51:55.716 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 15:51:57.660 +05:30 [INF] Executed DbCommand (651ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 15:51:57.837 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 15:51:57.867 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 15:51:57.870 +05:30 [INF] CORS policy execution successful.
+2024-04-17 15:51:57.871 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 3542.8462ms
+2024-04-17 15:51:57.872 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 15:51:57.874 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 15:51:57.875 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 15:51:57.882 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 3766.2048 ms
+2024-04-17 15:51:57.886 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 15:51:57.908 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 3801.9624ms
+2024-04-17 15:51:57.912 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 15:51:57.914 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 15:51:57.915 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 38.7695ms
+2024-04-17 15:51:57.916 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 15:51:57.916 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 46.3469 ms
+2024-04-17 15:51:57.917 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 50.3779ms
+2024-04-17 15:52:43.039 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 15:52:43.053 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 15:52:43.055 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 15:52:43.093 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 15:52:43.104 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 15:52:43.106 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 15:52:43.108 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 51.2502ms
+2024-04-17 15:52:43.109 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 15:52:43.109 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 59.6861 ms
+2024-04-17 15:52:43.110 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 70.9133ms
+2024-04-17 15:53:38.120 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 15:53:38.149 +05:30 [INF] CORS policy execution successful.
+2024-04-17 15:53:38.151 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 15:53:38.152 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 15:53:38.153 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 15:53:38.158 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 15:53:38.159 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 15:53:38.160 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 7.251ms
+2024-04-17 15:53:38.161 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 15:53:38.161 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 12.5880 ms
+2024-04-17 15:53:38.163 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 43.2606ms
+2024-04-17 15:54:14.145 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 15:54:14.150 +05:30 [INF] CORS policy execution successful.
+2024-04-17 15:54:14.151 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 15:54:14.152 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 15:54:14.154 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 15:54:14.158 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 15:54:14.160 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 15:54:14.161 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 7.8013ms
+2024-04-17 15:54:14.162 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 15:54:14.163 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 12.5400 ms
+2024-04-17 15:54:14.164 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 19.2404ms
+2024-04-17 15:59:26.131 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 15:59:26.156 +05:30 [INF] CORS policy execution successful.
+2024-04-17 15:59:26.160 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 15:59:26.162 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 15:59:26.165 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 15:59:26.201 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 15:59:26.203 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 15:59:26.204 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 40.634ms
+2024-04-17 15:59:26.205 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 15:59:26.206 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 51.6296 ms
+2024-04-17 15:59:26.208 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 76.2136ms
+2024-04-17 16:11:53.199 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:11:53.201 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:11:53.201 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:11:53.202 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:11:53.208 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:11:53.231 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:11:53.233 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:11:53.234 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 28.1174ms
+2024-04-17 16:11:53.234 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:11:53.235 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 34.7037 ms
+2024-04-17 16:11:53.237 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 37.3488ms
+2024-04-17 16:12:22.121 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:12:22.126 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:12:22.133 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:12:22.135 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:12:22.137 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:12:22.142 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:12:22.144 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:12:22.144 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 8.1897ms
+2024-04-17 16:12:22.147 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:12:22.149 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 22.4193 ms
+2024-04-17 16:12:22.151 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 30.2438ms
+2024-04-17 16:22:31.129 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:22:31.146 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:22:31.146 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:22:31.147 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:22:31.150 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:22:31.191 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:22:31.194 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:22:31.195 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 47.1343ms
+2024-04-17 16:22:31.196 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:22:31.197 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 51.7476 ms
+2024-04-17 16:22:31.198 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 70.5316ms
+2024-04-17 16:22:47.427 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:22:47.428 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:22:47.430 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:22:47.431 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:22:47.434 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:22:47.443 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:22:47.445 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:22:47.447 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 14.2127ms
+2024-04-17 16:22:47.449 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:22:47.450 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 21.4753 ms
+2024-04-17 16:22:47.451 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 24.3437ms
+2024-04-17 16:23:38.152 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:23:38.159 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:23:38.162 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:23:38.163 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:23:38.165 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:23:38.180 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:23:38.183 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:23:38.184 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 20.0678ms
+2024-04-17 16:23:38.185 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:23:38.186 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 27.4576 ms
+2024-04-17 16:23:38.188 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 36.1509ms
+2024-04-17 16:24:01.913 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:24:01.930 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:24:01.962 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:24:01.964 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:24:01.966 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:24:01.980 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:24:01.982 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:24:01.983 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 17.9495ms
+2024-04-17 16:24:01.984 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:24:01.984 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 54.7418 ms
+2024-04-17 16:24:01.985 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 73.7928ms
+2024-04-17 16:29:12.130 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:29:12.137 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:29:12.144 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:29:12.149 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:29:12.153 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:29:12.202 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:29:12.205 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:29:12.207 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 56.6294ms
+2024-04-17 16:29:12.208 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:29:12.209 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 71.8155 ms
+2024-04-17 16:29:12.210 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 79.7194ms
+2024-04-17 16:34:36.115 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:34:36.119 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:34:36.120 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:34:36.121 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:34:36.124 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:34:36.160 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:34:36.163 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:34:36.164 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 41.7562ms
+2024-04-17 16:34:36.164 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:34:36.165 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 46.3754 ms
+2024-04-17 16:34:36.166 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 51.8538ms
+2024-04-17 16:34:45.103 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:34:45.104 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:34:45.104 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:34:45.106 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:34:45.109 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:34:45.117 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:34:45.119 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:34:45.120 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 11.6774ms
+2024-04-17 16:34:45.121 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:34:45.121 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 17.6894 ms
+2024-04-17 16:34:45.124 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 20.5729ms
+2024-04-17 16:35:47.152 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:35:47.165 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:35:47.166 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:35:47.167 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:35:47.169 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:35:47.177 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:35:47.181 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:35:47.183 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 15.2182ms
+2024-04-17 16:35:47.184 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:35:47.184 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 19.3888 ms
+2024-04-17 16:35:47.186 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 36.1431ms
+2024-04-17 16:36:21.139 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:36:21.141 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:36:21.143 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:36:21.144 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:36:21.146 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:36:21.152 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:36:21.155 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:36:21.157 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 11.8979ms
+2024-04-17 16:36:21.160 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:36:21.161 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 20.0505 ms
+2024-04-17 16:36:21.162 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 23.6712ms
+2024-04-17 16:36:47.352 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:36:47.361 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:36:47.362 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:36:47.363 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:36:47.365 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:36:47.371 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:36:47.374 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:36:47.375 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 11.521ms
+2024-04-17 16:36:47.376 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:36:47.377 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 16.5417 ms
+2024-04-17 16:36:47.378 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 27.4015ms
+2024-04-17 16:37:07.505 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:37:07.506 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:37:07.507 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:37:07.508 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:37:07.510 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:37:07.515 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:37:07.517 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:37:07.518 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 8.4044ms
+2024-04-17 16:37:07.519 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:37:07.519 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 13.1128 ms
+2024-04-17 16:37:07.522 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 16.5800ms
+2024-04-17 16:37:18.517 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:37:18.518 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:37:18.519 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:37:18.520 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:37:18.522 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:37:18.528 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:37:18.530 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:37:18.531 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 9.2657ms
+2024-04-17 16:37:18.532 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:37:18.532 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 14.2332 ms
+2024-04-17 16:37:18.533 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 16.2086ms
+2024-04-17 16:37:31.792 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:37:31.798 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:37:31.799 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:37:31.800 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:37:31.801 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:37:31.808 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:37:31.810 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:37:31.812 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 11.2201ms
+2024-04-17 16:37:31.813 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:37:31.814 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 15.4674 ms
+2024-04-17 16:37:31.816 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 23.2543ms
+2024-04-17 16:37:39.574 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 16:37:39.575 +05:30 [INF] CORS policy execution successful.
+2024-04-17 16:37:39.575 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:37:39.577 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 16:37:39.579 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 16:37:39.584 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 16:37:39.585 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 16:37:39.589 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 10.5182ms
+2024-04-17 16:37:39.591 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 16:37:39.592 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 17.4558 ms
+2024-04-17 16:37:39.593 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 19.8017ms
+2024-04-17 17:48:41.852 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 17:48:41.852 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 17:48:41.891 +05:30 [INF] CORS policy execution successful.
+2024-04-17 17:48:41.891 +05:30 [INF] CORS policy execution successful.
+2024-04-17 17:48:42.119 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 236.7666 ms
+2024-04-17 17:48:42.119 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 236.7982 ms
+2024-04-17 17:48:42.133 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 285.6820ms
+2024-04-17 17:48:42.135 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 288.2957ms
+2024-04-17 17:48:42.144 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 17:48:42.229 +05:30 [INF] CORS policy execution successful.
+2024-04-17 17:48:42.484 +05:30 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-04-17 17:48:42.489 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 17:48:42.585 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 17:48:42.647 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 17:48:42.806 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 216.3887ms
+2024-04-17 17:48:42.808 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 17:48:42.808 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 17:48:42.814 +05:30 [INF] CORS policy execution successful.
+2024-04-17 17:48:42.816 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 589.7929 ms
+2024-04-17 17:48:42.817 +05:30 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-04-17 17:48:42.822 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 678.4495ms
+2024-04-17 17:48:42.823 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 17:48:42.828 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 17:48:42.833 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 17:48:42.836 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 3.7666ms
+2024-04-17 17:48:42.838 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 17:48:42.842 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 28.1637 ms
+2024-04-17 17:48:42.844 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 35.9091ms
+2024-04-17 17:48:51.686 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 17:48:51.687 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 17:48:51.687 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 17:48:51.693 +05:30 [INF] CORS policy execution successful.
+2024-04-17 17:48:51.696 +05:30 [INF] CORS policy execution successful.
+2024-04-17 17:48:51.699 +05:30 [INF] CORS policy execution successful.
+2024-04-17 17:48:51.704 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 17:48:51.711 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 15.5764 ms
+2024-04-17 17:48:51.715 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 16.5034 ms
+2024-04-17 17:48:51.724 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 17:48:51.733 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 46.3637ms
+2024-04-17 17:48:51.740 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 17:48:51.751 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 63.9357ms
+2024-04-17 17:48:51.769 +05:30 [INF] CORS policy execution successful.
+2024-04-17 17:48:51.776 +05:30 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-04-17 17:48:51.779 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 17:48:51.783 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 17:48:51.785 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 17:48:51.795 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 17:48:51.810 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 18.3393ms
+2024-04-17 17:48:51.812 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 17:48:51.817 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 17:48:51.828 +05:30 [INF] CORS policy execution successful.
+2024-04-17 17:48:51.833 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 63.8700 ms
+2024-04-17 17:48:51.838 +05:30 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-04-17 17:48:51.849 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 108.8165ms
+2024-04-17 17:48:51.851 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 17:48:51.857 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 17:48:51.870 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 17:48:51.883 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 13.7086ms
+2024-04-17 17:48:51.890 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 17:48:51.897 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 68.7681 ms
+2024-04-17 17:48:51.907 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 94.7065ms
+2024-04-17 17:48:51.967 +05:30 [INF] Executed DbCommand (97ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 17:48:51.994 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 17:48:52.000 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 235.952ms
+2024-04-17 17:48:52.006 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 17:48:52.010 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 317.7338 ms
+2024-04-17 17:48:52.011 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 17:48:52.023 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 336.5931ms
+2024-04-17 17:48:52.027 +05:30 [INF] CORS policy execution successful.
+2024-04-17 17:48:52.035 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 17:48:52.040 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 17:48:52.051 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 17:48:52.062 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 17:48:52.071 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 17:48:52.079 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 30.2593ms
+2024-04-17 17:48:52.086 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 17:48:52.091 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 64.0404 ms
+2024-04-17 17:48:52.095 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 84.7109ms
+2024-04-17 21:44:09.072 +05:30 [INF] User profile is available. Using 'C:\Users\mirza\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-17 21:44:10.922 +05:30 [INF] Now listening on: https://localhost:7036
+2024-04-17 21:44:10.924 +05:30 [INF] Now listening on: http://localhost:5228
+2024-04-17 21:44:10.929 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-17 21:44:10.931 +05:30 [INF] Hosting environment: Development
+2024-04-17 21:44:10.932 +05:30 [INF] Content root path: C:\Users\mirza\Downloads\QuitQ_Ecom_I\QuitQ_Ecom\QuitQ_Ecom\
+2024-04-17 21:44:13.023 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - -
+2024-04-17 21:44:14.850 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - - - 200 - text/html;charset=utf-8 1865.4893ms
+2024-04-17 21:44:14.984 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - -
+2024-04-17 21:44:14.984 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - -
+2024-04-17 21:44:14.995 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 10.6395ms
+2024-04-17 21:44:15.113 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 128.9705ms
+2024-04-17 21:44:15.580 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - -
+2024-04-17 21:44:15.859 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 279.0885ms
+2024-04-17 21:45:16.143 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 21:45:16.152 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 21:45:16.206 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:45:16.206 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:45:16.213 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 8.1260 ms
+2024-04-17 21:45:16.213 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 8.1568 ms
+2024-04-17 21:45:16.220 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 76.8711ms
+2024-04-17 21:45:16.221 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 70.3314ms
+2024-04-17 21:45:16.224 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 21:45:16.227 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:45:16.467 +05:30 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-04-17 21:45:16.477 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 21:45:16.499 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 21:45:16.945 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 21:45:16.981 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 21:45:16.982 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 467.8473ms
+2024-04-17 21:45:16.985 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:45:16.992 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 21:45:16.993 +05:30 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-04-17 21:45:16.994 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 767.8745 ms
+2024-04-17 21:45:16.997 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 21:45:17.007 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 21:45:17.011 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 786.9401ms
+2024-04-17 21:45:17.019 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 21:45:17.021 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:45:17.021 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 11.1078ms
+2024-04-17 21:45:17.024 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 21:45:17.024 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:45:17.026 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 40.6984 ms
+2024-04-17 21:45:17.031 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 48.9643ms
+2024-04-17 21:45:17.033 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:45:17.069 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:45:18.309 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:45:21.264 +05:30 [INF] Executed DbCommand (1,553ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:45:21.456 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:45:21.480 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 4408.2312ms
+2024-04-17 21:45:21.480 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:45:21.486 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:45:21.486 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:45:21.490 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:45:21.490 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 4466.2755 ms
+2024-04-17 21:45:21.491 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:45:21.498 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:45:21.511 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 4489.5988ms
+2024-04-17 21:45:21.527 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:45:21.532 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:45:21.535 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 38.8014ms
+2024-04-17 21:45:21.539 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:45:21.541 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 54.5259 ms
+2024-04-17 21:45:21.547 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 66.7994ms
+2024-04-17 21:47:49.314 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:47:49.324 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:47:49.328 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:47:49.329 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:47:49.371 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:47:49.395 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:47:49.405 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:47:49.408 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 74.5016ms
+2024-04-17 21:47:49.411 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:47:49.412 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 88.1416 ms
+2024-04-17 21:47:49.415 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 102.0636ms
+2024-04-17 21:47:53.330 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 21:47:53.333 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 21:47:53.346 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:47:53.351 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:47:53.354 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 8.4426 ms
+2024-04-17 21:47:53.355 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 3.9588 ms
+2024-04-17 21:47:53.367 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 37.3045ms
+2024-04-17 21:47:53.373 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 39.9354ms
+2024-04-17 21:47:53.376 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 21:47:53.389 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:47:53.393 +05:30 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-04-17 21:47:53.399 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 21:47:53.401 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 21:47:53.404 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 21:47:53.406 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 2.4368ms
+2024-04-17 21:47:53.408 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 21:47:53.409 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 21:47:53.410 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 20.7945 ms
+2024-04-17 21:47:53.413 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:47:53.415 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 38.4052ms
+2024-04-17 21:47:53.417 +05:30 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-04-17 21:47:53.419 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 21:47:53.421 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 21:47:53.425 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 21:47:53.429 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 4.066ms
+2024-04-17 21:47:53.431 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:47:53.432 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 21:47:53.433 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:47:53.434 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 20.6593 ms
+2024-04-17 21:47:53.435 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:47:53.438 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 28.7012ms
+2024-04-17 21:47:53.441 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:47:53.449 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:47:53.476 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:47:53.485 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:47:53.490 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 41.7826ms
+2024-04-17 21:47:53.493 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:47:53.493 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:47:53.496 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 63.8408 ms
+2024-04-17 21:47:53.499 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:47:53.502 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 71.3492ms
+2024-04-17 21:47:53.504 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:47:53.508 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:47:53.513 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:47:53.527 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:47:53.531 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:47:53.534 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 21.5915ms
+2024-04-17 21:47:53.537 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:47:53.539 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 40.8429 ms
+2024-04-17 21:47:53.545 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 51.3561ms
+2024-04-17 21:48:09.276 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:48:09.282 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:48:09.289 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:48:09.295 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:48:09.300 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:48:09.319 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:48:09.329 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:48:09.332 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 33.6069ms
+2024-04-17 21:48:09.336 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:48:09.339 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 57.6404 ms
+2024-04-17 21:48:09.345 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 68.8793ms
+2024-04-17 21:49:50.909 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-17 21:49:50.918 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:49:50.928 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 9.9144 ms
+2024-04-17 21:49:50.936 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 26.3432ms
+2024-04-17 21:49:50.940 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 47
+2024-04-17 21:49:50.944 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:49:50.947 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-17 21:49:50.954 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 21:49:54.826 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:49:54.980 +05:30 [INF] Executed DbCommand (134ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-17 21:49:55.054 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__UsertypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserType]
+FROM [UserType] AS [u]
+WHERE [u].[UserTypeId] = @__UsertypeId_0
+2024-04-17 21:49:55.149 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__genderId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [g].[GenderName]
+FROM [Gender] AS [g]
+WHERE [g].[GenderId] = @__genderId_0
+2024-04-17 21:49:55.175 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__userStatusId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserStatus]
+FROM [UserStatus] AS [u]
+WHERE [u].[UserStatusId] = @__userStatusId_0
+2024-04-17 21:49:56.231 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType7`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`10[[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:49:56.257 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 5294.772ms
+2024-04-17 21:49:56.260 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-17 21:49:56.269 +05:30 [INF] HTTP POST /api/token/login responded 200 in 5324.7417 ms
+2024-04-17 21:49:56.276 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 47 - 200 - application/json;+charset=utf-8 5335.9630ms
+2024-04-17 21:50:14.257 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:50:14.260 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:50:14.264 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:50:14.267 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:50:14.273 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:50:14.321 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:50:14.336 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:50:14.345 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 72.8077ms
+2024-04-17 21:50:14.350 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:50:14.350 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:50:14.352 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:50:14.355 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 94.9664 ms
+2024-04-17 21:50:14.358 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:50:14.364 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 107.4207ms
+2024-04-17 21:50:14.368 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:50:14.378 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:50:14.390 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:50:14.403 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:50:14.408 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 30.713ms
+2024-04-17 21:50:14.413 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:50:14.414 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 62.4029 ms
+2024-04-17 21:50:14.417 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 67.0580ms
+2024-04-17 21:53:36.560 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:53:36.575 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:53:36.582 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:53:36.586 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:53:36.591 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:53:36.611 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:53:36.626 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:53:36.631 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 40.6679ms
+2024-04-17 21:53:36.632 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:53:36.636 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 60.9578 ms
+2024-04-17 21:53:36.642 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:53:36.644 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 85.6548ms
+2024-04-17 21:53:36.646 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:53:36.648 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:53:36.649 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:53:36.654 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:53:36.663 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:53:36.668 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:53:36.671 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 17.9948ms
+2024-04-17 21:53:36.673 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:53:36.674 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 28.4861 ms
+2024-04-17 21:53:36.676 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 33.5506ms
+2024-04-17 21:55:28.103 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-17 21:55:28.123 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:55:28.129 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 6.9001 ms
+2024-04-17 21:55:28.132 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 29.1867ms
+2024-04-17 21:55:28.135 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 46
+2024-04-17 21:55:28.137 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:55:28.138 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-17 21:55:28.143 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 21:55:30.155 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:55:30.176 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-17 21:55:30.190 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-04-17 21:55:30.193 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 2043.3342ms
+2024-04-17 21:55:30.195 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-17 21:55:30.195 +05:30 [INF] HTTP POST /api/token/login responded 400 in 2058.6006 ms
+2024-04-17 21:55:30.200 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 46 - 400 - text/plain;+charset=utf-8 2064.5170ms
+2024-04-17 21:55:53.878 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-17 21:55:53.888 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:55:53.893 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 5.1598 ms
+2024-04-17 21:55:53.903 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 26.0411ms
+2024-04-17 21:55:53.906 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 47
+2024-04-17 21:55:53.913 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:55:53.918 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-17 21:55:53.927 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 21:55:55.615 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:55:55.627 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-17 21:55:55.646 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__UsertypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserType]
+FROM [UserType] AS [u]
+WHERE [u].[UserTypeId] = @__UsertypeId_0
+2024-04-17 21:55:55.661 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__genderId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [g].[GenderName]
+FROM [Gender] AS [g]
+WHERE [g].[GenderId] = @__genderId_0
+2024-04-17 21:55:55.677 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userStatusId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserStatus]
+FROM [UserStatus] AS [u]
+WHERE [u].[UserStatusId] = @__userStatusId_0
+2024-04-17 21:55:55.682 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType7`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`10[[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:55:55.685 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 1756.4954ms
+2024-04-17 21:55:55.687 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-17 21:55:55.688 +05:30 [INF] HTTP POST /api/token/login responded 200 in 1775.0023 ms
+2024-04-17 21:55:55.692 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 47 - 200 - application/json;+charset=utf-8 1785.8604ms
+2024-04-17 21:55:59.716 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:55:59.721 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:55:59.722 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:55:59.723 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:55:59.728 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:55:59.752 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:55:59.760 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:55:59.764 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 36.2881ms
+2024-04-17 21:55:59.773 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:55:59.775 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:55:59.777 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 58.1373 ms
+2024-04-17 21:55:59.782 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:55:59.786 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 69.8549ms
+2024-04-17 21:55:59.787 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:55:59.790 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:55:59.794 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:55:59.812 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:55:59.820 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:55:59.824 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 30.7005ms
+2024-04-17 21:55:59.828 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:55:59.830 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 47.9417 ms
+2024-04-17 21:55:59.833 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 58.1196ms
+2024-04-17 21:56:41.255 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:56:41.256 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:56:41.259 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:56:41.261 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:56:41.265 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:56:41.283 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:56:41.292 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:56:41.293 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 30.716ms
+2024-04-17 21:56:41.303 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:56:41.306 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - -
+2024-04-17 21:56:41.316 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 60.0323 ms
+2024-04-17 21:56:41.319 +05:30 [INF] CORS policy execution successful.
+2024-04-17 21:56:41.321 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 66.3441ms
+2024-04-17 21:56:41.321 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:56:41.323 +05:30 [INF] Route matched with {action = "GetProductsBySubcategoryID", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductsBySubcategoryID(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 21:56:41.326 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 21:56:41.551 +05:30 [INF] Executed DbCommand (222ms) [Parameters=[@__SubcategoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM [Products] AS [p]
+LEFT JOIN [ProductDetails] AS [p0] ON [p].[ProductId] = [p0].[ProductId]
+WHERE [p].[SubCategoryId] = @__SubcategoryId_0
+ORDER BY [p].[ProductId]
+2024-04-17 21:56:41.560 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[QuitQ_Ecom.DTOs.ProductDTO, QuitQ_Ecom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-17 21:56:41.566 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom) in 241.0531ms
+2024-04-17 21:56:41.568 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductsBySubcategoryID (QuitQ_Ecom)'
+2024-04-17 21:56:41.569 +05:30 [INF] HTTP GET /api/products/subcategories/1 responded 200 in 249.9026 ms
+2024-04-17 21:56:41.571 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/subcategories/1 - - - 200 - application/json;+charset=utf-8 265.0095ms
+2024-04-17 22:59:16.697 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 22:59:16.787 +05:30 [INF] CORS policy execution successful.
+2024-04-17 22:59:16.802 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 18.1809 ms
+2024-04-17 22:59:16.812 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 141.9414ms
+2024-04-17 22:59:16.816 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 22:59:16.821 +05:30 [INF] CORS policy execution successful.
+2024-04-17 22:59:17.612 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:29:17'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-04-17 22:59:18.360 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:29:17'.
+2024-04-17 22:59:18.366 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 22:59:18.378 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 22:59:18.397 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 22:59:18.399 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 19.6114ms
+2024-04-17 22:59:18.400 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 22:59:18.400 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 1579.8602 ms
+2024-04-17 22:59:18.402 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 1586.0416ms
+2024-04-17 23:17:48.298 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:17:48.307 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:17:48.312 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 4.9326 ms
+2024-04-17 23:17:48.318 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 22.6673ms
+2024-04-17 23:17:48.320 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:17:48.322 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:17:48.331 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:47:48'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-04-17 23:17:48.341 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:47:48'.
+2024-04-17 23:17:48.345 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:17:48.347 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 23:17:48.350 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 23:17:48.352 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 3.1166ms
+2024-04-17 23:17:48.355 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:17:48.358 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 36.6114 ms
+2024-04-17 23:17:48.361 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 40.8752ms
+2024-04-17 23:18:05.823 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:18:05.824 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/1 - -
+2024-04-17 23:18:05.824 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:18:05.843 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:18:05.847 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:18:05.849 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 9.5796 ms
+2024-04-17 23:18:05.851 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 4.2481 ms
+2024-04-17 23:18:05.854 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 31.0275ms
+2024-04-17 23:18:05.868 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 44.1690ms
+2024-04-17 23:18:05.870 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:18:05.872 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:18:05.873 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:18:05.874 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:48:05'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-04-17 23:18:05.875 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:18:05.878 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:48:05'.
+2024-04-17 23:18:05.881 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:18:05.882 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 23:18:05.885 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 23:18:05.887 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 2.1738ms
+2024-04-17 23:18:05.888 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:18:05.889 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:18:05.890 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:18:05.891 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 18.8502 ms
+2024-04-17 23:18:05.892 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:48:05'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-04-17 23:18:05.895 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 25.9786ms
+2024-04-17 23:18:05.899 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:48:05'.
+2024-04-17 23:18:05.901 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:18:05.902 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 23:18:05.905 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 23:18:05.907 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 2.1283ms
+2024-04-17 23:18:05.909 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:18:05.910 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 20.5154 ms
+2024-04-17 23:18:05.913 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 24.6998ms
+2024-04-17 23:18:06.063 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 23:18:06.211 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 23:18:06.757 +05:30 [INF] Executed DbCommand (200ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ProductId], [t].[BrandId], [t].[CategoryId], [t].[Price], [t].[ProductImage], [t].[ProductName], [t].[ProductStatusId], [t].[Quantity], [t].[StoreId], [t].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM (
+    SELECT TOP(1) [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId]
+    FROM [Products] AS [p]
+    WHERE [p].[ProductId] = @__productId_0
+) AS [t]
+LEFT JOIN [ProductDetails] AS [p0] ON [t].[ProductId] = [p0].[ProductId]
+ORDER BY [t].[ProductId]
+2024-04-17 23:18:06.770 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-04-17 23:18:06.772 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom) in 704.159ms
+2024-04-17 23:18:06.772 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:18:06.774 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/1 - -
+2024-04-17 23:18:06.774 +05:30 [INF] HTTP GET /api/products/1 responded 404 in 903.0098 ms
+2024-04-17 23:18:06.774 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:18:06.776 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/1 - - - 404 - text/plain;+charset=utf-8 952.4125ms
+2024-04-17 23:18:06.776 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:18:06.777 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 23:18:06.780 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 23:18:06.786 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ProductId], [t].[BrandId], [t].[CategoryId], [t].[Price], [t].[ProductImage], [t].[ProductName], [t].[ProductStatusId], [t].[Quantity], [t].[StoreId], [t].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM (
+    SELECT TOP(1) [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId]
+    FROM [Products] AS [p]
+    WHERE [p].[ProductId] = @__productId_0
+) AS [t]
+LEFT JOIN [ProductDetails] AS [p0] ON [t].[ProductId] = [p0].[ProductId]
+ORDER BY [t].[ProductId]
+2024-04-17 23:18:06.792 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-04-17 23:18:06.795 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom) in 15.9561ms
+2024-04-17 23:18:06.797 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:18:06.798 +05:30 [INF] HTTP GET /api/products/1 responded 404 in 23.8171 ms
+2024-04-17 23:18:06.801 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/1 - - - 404 - text/plain;+charset=utf-8 27.0016ms
+2024-04-17 23:23:58.076 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:23:58.076 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/1 - -
+2024-04-17 23:23:58.076 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:23:58.088 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:23:58.089 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:23:58.090 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:23:58.091 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 4.6402 ms
+2024-04-17 23:23:58.093 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 2.4000 ms
+2024-04-17 23:23:58.093 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:23:58.094 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 20.0105ms
+2024-04-17 23:23:58.095 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 20.3530ms
+2024-04-17 23:23:58.098 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 23:23:58.099 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:23:58.101 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:23:58.106 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:53:58'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-04-17 23:23:58.110 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 23:23:58.111 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:53:58'.
+2024-04-17 23:23:58.114 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:23:58.116 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 23:23:58.121 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 23:23:58.124 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 4.8379ms
+2024-04-17 23:23:58.125 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:23:58.126 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:23:58.126 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 25.3935 ms
+2024-04-17 23:23:58.127 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:23:58.129 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 30.2287ms
+2024-04-17 23:23:58.131 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:53:58'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-04-17 23:23:58.135 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:53:58'.
+2024-04-17 23:23:58.136 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:23:58.137 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 23:23:58.140 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 23:23:58.142 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 1.8406ms
+2024-04-17 23:23:58.143 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:23:58.144 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 16.9660 ms
+2024-04-17 23:23:58.147 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 21.5210ms
+2024-04-17 23:23:58.203 +05:30 [INF] Executed DbCommand (85ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ProductId], [t].[BrandId], [t].[CategoryId], [t].[Price], [t].[ProductImage], [t].[ProductName], [t].[ProductStatusId], [t].[Quantity], [t].[StoreId], [t].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM (
+    SELECT TOP(1) [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId]
+    FROM [Products] AS [p]
+    WHERE [p].[ProductId] = @__productId_0
+) AS [t]
+LEFT JOIN [ProductDetails] AS [p0] ON [t].[ProductId] = [p0].[ProductId]
+ORDER BY [t].[ProductId]
+2024-04-17 23:23:58.208 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-04-17 23:23:58.209 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom) in 109.4138ms
+2024-04-17 23:23:58.211 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:23:58.212 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/1 - -
+2024-04-17 23:23:58.212 +05:30 [INF] HTTP GET /api/products/1 responded 404 in 123.2138 ms
+2024-04-17 23:23:58.213 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:23:58.214 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/1 - - - 404 - text/plain;+charset=utf-8 140.2019ms
+2024-04-17 23:23:58.215 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:23:58.217 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 23:23:58.221 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 23:23:58.227 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ProductId], [t].[BrandId], [t].[CategoryId], [t].[Price], [t].[ProductImage], [t].[ProductName], [t].[ProductStatusId], [t].[Quantity], [t].[StoreId], [t].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM (
+    SELECT TOP(1) [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId]
+    FROM [Products] AS [p]
+    WHERE [p].[ProductId] = @__productId_0
+) AS [t]
+LEFT JOIN [ProductDetails] AS [p0] ON [t].[ProductId] = [p0].[ProductId]
+ORDER BY [t].[ProductId]
+2024-04-17 23:23:58.231 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-04-17 23:23:58.233 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom) in 13.9019ms
+2024-04-17 23:23:58.236 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:23:58.237 +05:30 [INF] HTTP GET /api/products/1 responded 404 in 23.9860 ms
+2024-04-17 23:23:58.239 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/1 - - - 404 - text/plain;+charset=utf-8 27.7910ms
+2024-04-17 23:24:25.272 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/1 - -
+2024-04-17 23:24:25.298 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:24:25.304 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:24:25.306 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 23:24:25.315 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 23:24:25.330 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ProductId], [t].[BrandId], [t].[CategoryId], [t].[Price], [t].[ProductImage], [t].[ProductName], [t].[ProductStatusId], [t].[Quantity], [t].[StoreId], [t].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM (
+    SELECT TOP(1) [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId]
+    FROM [Products] AS [p]
+    WHERE [p].[ProductId] = @__productId_0
+) AS [t]
+LEFT JOIN [ProductDetails] AS [p0] ON [t].[ProductId] = [p0].[ProductId]
+ORDER BY [t].[ProductId]
+2024-04-17 23:24:25.338 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-04-17 23:24:25.346 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom) in 31.568ms
+2024-04-17 23:24:25.350 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:24:25.352 +05:30 [INF] HTTP GET /api/products/1 responded 404 in 53.9863 ms
+2024-04-17 23:24:25.362 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/1 - - - 404 - text/plain;+charset=utf-8 89.8275ms
+2024-04-17 23:24:26.247 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/6 - -
+2024-04-17 23:24:26.248 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:24:26.251 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:24:26.253 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 23:24:26.255 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 23:24:26.271 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ProductId], [t].[BrandId], [t].[CategoryId], [t].[Price], [t].[ProductImage], [t].[ProductName], [t].[ProductStatusId], [t].[Quantity], [t].[StoreId], [t].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM (
+    SELECT TOP(1) [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId]
+    FROM [Products] AS [p]
+    WHERE [p].[ProductId] = @__productId_0
+) AS [t]
+LEFT JOIN [ProductDetails] AS [p0] ON [t].[ProductId] = [p0].[ProductId]
+ORDER BY [t].[ProductId]
+2024-04-17 23:24:26.875 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[StoreId], [s].[CityId], [s].[ContactNumber], [s].[Description], [s].[SellerId], [s].[StoreFullAddress], [s].[StoreLogo], [s].[StoreName]
+FROM [Stores] AS [s]
+WHERE [s].[StoreId] = @__p_0
+2024-04-17 23:24:26.944 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__p_0
+2024-04-17 23:24:26.972 +05:30 [INF] Executing OkObjectResult, writing value of type 'QuitQ_Ecom.DTOs.ProductDTO'.
+2024-04-17 23:24:27.015 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom) in 759.7792ms
+2024-04-17 23:24:27.022 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:24:27.026 +05:30 [INF] HTTP GET /api/products/6 responded 200 in 778.3077 ms
+2024-04-17 23:24:27.032 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/6 - - - 200 - application/json;+charset=utf-8 785.3093ms
+2024-04-17 23:25:05.280 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:25:05.283 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:25:05.285 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 1.6586 ms
+2024-04-17 23:25:05.293 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:25:05.312 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 32.1975ms
+2024-04-17 23:25:05.347 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:25:05.394 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:25:05.394 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 47.2372 ms
+2024-04-17 23:25:05.389 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/6 - -
+2024-04-17 23:25:05.396 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:25:05.398 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 105.7686ms
+2024-04-17 23:25:05.399 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:25:05.402 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:55:05'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-04-17 23:25:05.406 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:25:05.412 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:55:05'.
+2024-04-17 23:25:05.415 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 23:25:05.421 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:25:05.424 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 23:25:05.424 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 23:25:05.426 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 23:25:05.429 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 3.2347ms
+2024-04-17 23:25:05.440 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:25:05.440 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ProductId], [t].[BrandId], [t].[CategoryId], [t].[Price], [t].[ProductImage], [t].[ProductName], [t].[ProductStatusId], [t].[Quantity], [t].[StoreId], [t].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM (
+    SELECT TOP(1) [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId]
+    FROM [Products] AS [p]
+    WHERE [p].[ProductId] = @__productId_0
+) AS [t]
+LEFT JOIN [ProductDetails] AS [p0] ON [t].[ProductId] = [p0].[ProductId]
+ORDER BY [t].[ProductId]
+2024-04-17 23:25:05.441 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:25:05.441 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 45.5141 ms
+2024-04-17 23:25:05.449 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:25:05.455 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 61.2762ms
+2024-04-17 23:25:05.456 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[StoreId], [s].[CityId], [s].[ContactNumber], [s].[Description], [s].[SellerId], [s].[StoreFullAddress], [s].[StoreLogo], [s].[StoreName]
+FROM [Stores] AS [s]
+WHERE [s].[StoreId] = @__p_0
+2024-04-17 23:25:05.457 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:55:05'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-04-17 23:25:05.463 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:55:05'.
+2024-04-17 23:25:05.464 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:25:05.464 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 23:25:05.466 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__p_0
+2024-04-17 23:25:05.467 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 23:25:05.469 +05:30 [INF] Executing OkObjectResult, writing value of type 'QuitQ_Ecom.DTOs.ProductDTO'.
+2024-04-17 23:25:05.471 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 4.3916ms
+2024-04-17 23:25:05.471 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom) in 48.5195ms
+2024-04-17 23:25:05.473 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:25:05.481 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/6 - -
+2024-04-17 23:25:05.481 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:25:05.482 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 33.0495 ms
+2024-04-17 23:25:05.483 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:25:05.484 +05:30 [INF] HTTP GET /api/products/6 responded 200 in 85.3727 ms
+2024-04-17 23:25:05.487 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 46.3482ms
+2024-04-17 23:25:05.488 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:25:05.490 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/6 - - - 200 - application/json;+charset=utf-8 142.6158ms
+2024-04-17 23:25:05.491 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 23:25:05.496 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 23:25:05.503 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ProductId], [t].[BrandId], [t].[CategoryId], [t].[Price], [t].[ProductImage], [t].[ProductName], [t].[ProductStatusId], [t].[Quantity], [t].[StoreId], [t].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM (
+    SELECT TOP(1) [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId]
+    FROM [Products] AS [p]
+    WHERE [p].[ProductId] = @__productId_0
+) AS [t]
+LEFT JOIN [ProductDetails] AS [p0] ON [t].[ProductId] = [p0].[ProductId]
+ORDER BY [t].[ProductId]
+2024-04-17 23:25:05.509 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[StoreId], [s].[CityId], [s].[ContactNumber], [s].[Description], [s].[SellerId], [s].[StoreFullAddress], [s].[StoreLogo], [s].[StoreName]
+FROM [Stores] AS [s]
+WHERE [s].[StoreId] = @__p_0
+2024-04-17 23:25:05.514 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__p_0
+2024-04-17 23:25:05.518 +05:30 [INF] Executing OkObjectResult, writing value of type 'QuitQ_Ecom.DTOs.ProductDTO'.
+2024-04-17 23:25:05.520 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom) in 25.2278ms
+2024-04-17 23:25:05.522 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:25:05.523 +05:30 [INF] HTTP GET /api/products/6 responded 200 in 39.9397 ms
+2024-04-17 23:25:05.526 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/6 - - - 200 - application/json;+charset=utf-8 44.8699ms
+2024-04-17 23:25:34.030 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:25:34.033 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/6 - -
+2024-04-17 23:25:34.030 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:25:34.038 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:25:34.039 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:25:34.040 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:25:34.041 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 3.5922 ms
+2024-04-17 23:25:34.042 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:25:34.043 +05:30 [INF] HTTP OPTIONS /api/token/isauthenticated/ responded 204 in 2.6954 ms
+2024-04-17 23:25:34.046 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 15.3622ms
+2024-04-17 23:25:34.046 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 23:25:34.048 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/isauthenticated/ - - - 204 - - 17.5520ms
+2024-04-17 23:25:34.049 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:25:34.063 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 23:25:34.063 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:25:34.067 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:55:34'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-04-17 23:25:34.082 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:55:34'.
+2024-04-17 23:25:34.084 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:25:34.085 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 23:25:34.085 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ProductId], [t].[BrandId], [t].[CategoryId], [t].[Price], [t].[ProductImage], [t].[ProductName], [t].[ProductStatusId], [t].[Quantity], [t].[StoreId], [t].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM (
+    SELECT TOP(1) [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId]
+    FROM [Products] AS [p]
+    WHERE [p].[ProductId] = @__productId_0
+) AS [t]
+LEFT JOIN [ProductDetails] AS [p0] ON [t].[ProductId] = [p0].[ProductId]
+ORDER BY [t].[ProductId]
+2024-04-17 23:25:34.087 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 23:25:34.090 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 4.1194ms
+2024-04-17 23:25:34.095 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:25:34.099 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[StoreId], [s].[CityId], [s].[ContactNumber], [s].[Description], [s].[SellerId], [s].[StoreFullAddress], [s].[StoreLogo], [s].[StoreName]
+FROM [Stores] AS [s]
+WHERE [s].[StoreId] = @__p_0
+2024-04-17 23:25:34.103 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - -
+2024-04-17 23:25:34.103 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 39.9122 ms
+2024-04-17 23:25:34.106 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:25:34.108 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 58.5664ms
+2024-04-17 23:25:34.111 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:55:34'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-04-17 23:25:34.114 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__p_0
+2024-04-17 23:25:34.116 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '17-04-2024 16:35:55', Current time (UTC): '17-04-2024 17:55:34'.
+2024-04-17 23:25:34.119 +05:30 [INF] Executing OkObjectResult, writing value of type 'QuitQ_Ecom.DTOs.ProductDTO'.
+2024-04-17 23:25:34.119 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:25:34.121 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom) in 60.7867ms
+2024-04-17 23:25:34.122 +05:30 [INF] Route matched with {action = "IsAuthenticated", controller = "Token"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult IsAuthenticated() on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-17 23:25:34.124 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/products/6 - -
+2024-04-17 23:25:34.124 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:25:34.130 +05:30 [INF] CORS policy execution successful.
+2024-04-17 23:25:34.131 +05:30 [INF] HTTP GET /api/products/6 responded 200 in 91.6986 ms
+2024-04-17 23:25:34.132 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:25:34.133 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`1[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-17 23:25:34.133 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/6 - - - 200 - application/json;+charset=utf-8 100.9395ms
+2024-04-17 23:25:34.134 +05:30 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(Int32) on controller QuitQ_Ecom.Controllers.ProductsController (QuitQ_Ecom).
+2024-04-17 23:25:34.136 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom) in 6.6394ms
+2024-04-17 23:25:34.140 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-17 23:25:34.140 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.IsAuthenticated (QuitQ_Ecom)'
+2024-04-17 23:25:34.152 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ProductId], [t].[BrandId], [t].[CategoryId], [t].[Price], [t].[ProductImage], [t].[ProductName], [t].[ProductStatusId], [t].[Quantity], [t].[StoreId], [t].[SubCategoryId], [p0].[ProductDetailId], [p0].[Attribute], [p0].[ProductId], [p0].[Value]
+FROM (
+    SELECT TOP(1) [p].[ProductId], [p].[BrandId], [p].[CategoryId], [p].[Price], [p].[ProductImage], [p].[ProductName], [p].[ProductStatusId], [p].[Quantity], [p].[StoreId], [p].[SubCategoryId]
+    FROM [Products] AS [p]
+    WHERE [p].[ProductId] = @__productId_0
+) AS [t]
+LEFT JOIN [ProductDetails] AS [p0] ON [t].[ProductId] = [p0].[ProductId]
+ORDER BY [t].[ProductId]
+2024-04-17 23:25:34.154 +05:30 [INF] HTTP GET /api/token/isauthenticated/ responded 200 in 47.9128 ms
+2024-04-17 23:25:34.161 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[StoreId], [s].[CityId], [s].[ContactNumber], [s].[Description], [s].[SellerId], [s].[StoreFullAddress], [s].[StoreLogo], [s].[StoreName]
+FROM [Stores] AS [s]
+WHERE [s].[StoreId] = @__p_0
+2024-04-17 23:25:34.162 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/token/isauthenticated/ - - - 200 - application/json;+charset=utf-8 59.9137ms
+2024-04-17 23:25:34.167 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__p_0
+2024-04-17 23:25:34.169 +05:30 [INF] Executing OkObjectResult, writing value of type 'QuitQ_Ecom.DTOs.ProductDTO'.
+2024-04-17 23:25:34.172 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom) in 33.1172ms
+2024-04-17 23:25:34.174 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.ProductsController.GetProductById (QuitQ_Ecom)'
+2024-04-17 23:25:34.179 +05:30 [INF] HTTP GET /api/products/6 responded 200 in 48.8813 ms
+2024-04-17 23:25:34.193 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/products/6 - - - 200 - application/json;+charset=utf-8 69.1829ms

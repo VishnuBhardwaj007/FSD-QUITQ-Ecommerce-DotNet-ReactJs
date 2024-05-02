@@ -1,0 +1,89 @@
+.footer2-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #035e70; /* Background for contrast */
+  }
+  
+  .footer2-heading {
+    color: #27036b; /* Blue color for heading */
+    font-size: 32px; /* Font size */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    /* Animation */
+    animation: textAnimation 1s ease-in-out infinite alternate;
+  }
+  
+  .footer2-bar {
+    height: 5px; /* Thickness of the bar */
+    width: 50px; /* Length of the bar */
+    background-color: darkorange;
+    margin: 10px auto 0 auto; /* Center the bar */
+  }
+  
+  .footer2-images {
+    display: flex; /* Align images side by side */
+    justify-content: center; /* Center the images */
+    gap: 25px; /* Space between images */
+    margin-top: 20px; /* Space between bar and images */
+  }
+  
+  .footer2-img {
+    max-height: 300px; /* Increase image size */
+    height: 300px;
+    width: 300px;
+    /* Animation */
+    transition: transform 0.3s ease-in-out;
+  }
+  .footer2-subline{
+    color: coral;
+  }
+  
+  /* Animation for image hover */
+  .footer2-img:hover {
+    transform: scale(1.1); /* Increase scale on hover */
+  }
+  
+  /* Keyframes for text animation */
+  @keyframes textAnimation {
+    0% {
+      transform: scale(1); /* Normal size */
+    }
+    100% {
+      transform: scale(1.1); /* Larger size */
+    }
+  }
+  
+  .typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    animation: typing 4s steps(40, end) infinite alternate;
+  }
+  
+  /* Keyframes for typing animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 150%;
+    }
+  }
+  
+  .crackers-sparklings {
+    display: inline-block;
+    animation: sparkling 1.5s infinite alternate;
+  }
+  
+  /* Keyframes for sparkling animation */
+  @keyframes sparkling {
+    0% {
+      color: #ff0000;
+    }
+    50% {
+      color: #00ff00;
+    }
+    100% {
+      color: #0000ff;
+    }
+  }
+  

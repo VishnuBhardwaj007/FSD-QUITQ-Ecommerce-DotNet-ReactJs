@@ -1,0 +1,36 @@
+/* Banner.css */
+.banner {
+    background-color: #f0f4f8;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-content {
+    text-align: center;
+  }
+  
+  .banner-content h1 {
+    margin-bottom: 1rem;
+  }
+  
+  .banner-content button {
+    padding: 0.5rem 1rem;
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .banner-content button:hover {
+    background-color: #0056e8;
+  }
+  
+  @media (max-width: 768px) {
+    .banner {
+      padding: 1rem;
+    }
+  }
+  

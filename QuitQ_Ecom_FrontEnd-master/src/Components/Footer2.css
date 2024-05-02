@@ -1,0 +1,43 @@
+.footer2-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* Background for contrast */
+}
+
+.footer2-heading {
+  color: #011932; /* Blue color for heading */
+  font-size: 32px; /* Font size */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+.footer2-bar {
+  height: 5px; /* Thickness of the bar */
+  width: 50px; /* Length of the bar */
+  background-color: darkorange;
+  margin: 10px auto 0 auto; /* Center the bar */
+}
+
+.footer2-images {
+  display: flex; /* Align images side by side */
+  justify-content: center; /* Center the images */
+  gap: 25px; /* Space between images */
+  margin-top: 20px; /* Space between bar and images */
+}
+
+.footer2-img {
+  max-height: 150px; /* Ensures a consistent height */
+  height: 150px;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  .footer2-images {
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+  }
+  
+  .footer2-img {
+    flex: 0 0 50%; /* Make images take up 50% of the container width */
+    max-width: 50%; /* Limit image width to 50% */
+  }
+}

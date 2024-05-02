@@ -1,0 +1,62 @@
+/* Wishlist.css */
+
+/* .product-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  } */
+  
+  .product-list-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(14, 14, 59);
+  }
+  
+  /* .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Decrease min width */
+    /* gap: 20px;
+  }  */
+/*   
+  .product-card {
+    border: 1px solid #a9a7a7;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  } */
+  
+  /* .product-image {
+    width: 100%; /* Fill the container */
+    /* height: auto;
+    max-width: 70px; /* Decrease max width */
+  /* } */ */ */
+  
+  /* .product-details {
+    padding: 10px;
+  } */
+  
+  /* .product-name {
+    margin-top: 0;
+  } */
+  
+  /* .product-price {
+    margin-bottom: 0;
+  } */
+  
+  .remove-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-button:hover {
+    background-color: darkred;
+  }
+  

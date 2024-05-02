@@ -1,0 +1,41 @@
+.form-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  select{
+    height: 20px;
+  }
+  
+  .form-row div {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .validation-message {
+    color: red;
+  }
+  
+  .add-product-button {
+    margin-top: 20px;
+  }
+
+  .reset-button{
+    margin-top: 20px;
+    background-color: rgb(245, 139, 10);
+  }
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .form-row div {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }  

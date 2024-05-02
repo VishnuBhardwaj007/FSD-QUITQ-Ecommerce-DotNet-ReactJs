@@ -1,0 +1,25 @@
+.main_home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid darkgreen; */
+    height:100%;
+   
+}
+#bigtitle{
+    /* font-size:4rem; */
+    font-weight: bolder;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.containing{display:"flex";
+    flex-direction: row;
+    border:"2px solid black"}
+
+@media screen and (max-width:528px) {
+        .containing{
+            flex-direction: column;
+            border:"2px solid pink"}
+    }

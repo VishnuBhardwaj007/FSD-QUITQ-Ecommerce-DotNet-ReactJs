@@ -1,0 +1,30 @@
+.footer3-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .footer3-heading {
+    color: #011a32;
+    font-size: 32px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+  }
+  
+  .footer3-bar {
+    height: 5px;
+    width: 50px;
+    background-color: darkorange;
+    margin: 10px auto 0 auto;
+  }
+  
+  .footer3-slider {
+    margin-top: 20px;
+  }
+  
+  .footer3-slider-img {
+    max-height: 150px;
+    height: auto;
+    padding: 10px;
+  }
+  

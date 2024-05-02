@@ -1,0 +1,262 @@
+2024-04-15 15:36:48.874 +05:30 [INF] User profile is available. Using 'C:\Users\mirza\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-15 15:36:50.314 +05:30 [INF] Now listening on: https://localhost:7036
+2024-04-15 15:36:50.316 +05:30 [INF] Now listening on: http://localhost:5228
+2024-04-15 15:36:50.321 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-15 15:36:50.322 +05:30 [INF] Hosting environment: Development
+2024-04-15 15:36:50.323 +05:30 [INF] Content root path: C:\Users\mirza\Downloads\QuitQ_Ecom_I\QuitQ_Ecom\QuitQ_Ecom\
+2024-04-15 15:36:51.782 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - -
+2024-04-15 15:36:52.632 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - - - 200 - text/html;charset=utf-8 859.6369ms
+2024-04-15 15:36:52.926 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - -
+2024-04-15 15:36:52.930 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - -
+2024-04-15 15:36:52.943 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 17.0822ms
+2024-04-15 15:36:53.139 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 208.9642ms
+2024-04-15 15:36:53.299 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - -
+2024-04-15 15:36:53.675 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 375.4654ms
+2024-04-15 15:40:29.841 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-15 15:40:29.852 +05:30 [INF] CORS policy execution successful.
+2024-04-15 15:40:29.857 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 7.2804 ms
+2024-04-15 15:40:29.862 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 20.7644ms
+2024-04-15 15:40:29.863 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 47
+2024-04-15 15:40:29.867 +05:30 [INF] CORS policy execution successful.
+2024-04-15 15:40:30.072 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 15:40:30.146 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-15 15:40:32.102 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-15 15:40:33.588 +05:30 [INF] Executed DbCommand (180ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-15 15:40:33.778 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__UsertypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserType]
+FROM [UserType] AS [u]
+WHERE [u].[UserTypeId] = @__UsertypeId_0
+2024-04-15 15:40:34.167 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-15 15:40:34.180 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 4026.7901ms
+2024-04-15 15:40:34.183 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 15:40:34.185 +05:30 [INF] HTTP POST /api/token/login responded 200 in 4318.4414 ms
+2024-04-15 15:40:34.195 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 47 - 200 - text/plain;+charset=utf-8 4331.8931ms
+2024-04-15 15:45:52.535 +05:30 [INF] User profile is available. Using 'C:\Users\mirza\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-15 15:45:53.071 +05:30 [INF] Now listening on: https://localhost:7036
+2024-04-15 15:45:53.072 +05:30 [INF] Now listening on: http://localhost:5228
+2024-04-15 15:45:53.075 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-15 15:45:53.075 +05:30 [INF] Hosting environment: Development
+2024-04-15 15:45:53.076 +05:30 [INF] Content root path: C:\Users\mirza\Downloads\QuitQ_Ecom_I\QuitQ_Ecom\QuitQ_Ecom\
+2024-04-15 15:45:56.354 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - -
+2024-04-15 15:45:56.769 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - - - 200 - text/html;charset=utf-8 419.5934ms
+2024-04-15 15:45:56.775 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - -
+2024-04-15 15:45:56.775 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - -
+2024-04-15 15:45:56.804 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 29.0552ms
+2024-04-15 15:45:56.872 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 97.6765ms
+2024-04-15 15:45:56.924 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - -
+2024-04-15 15:45:57.139 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 215.0111ms
+2024-04-15 15:46:09.082 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-15 15:46:09.094 +05:30 [INF] CORS policy execution successful.
+2024-04-15 15:46:09.098 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 6.7860 ms
+2024-04-15 15:46:09.104 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 21.5287ms
+2024-04-15 15:46:09.106 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 47
+2024-04-15 15:46:09.109 +05:30 [INF] CORS policy execution successful.
+2024-04-15 15:46:09.235 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 15:46:09.301 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-15 15:46:11.335 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-15 15:46:12.597 +05:30 [INF] Executed DbCommand (151ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-15 15:46:12.809 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__UsertypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserType]
+FROM [UserType] AS [u]
+WHERE [u].[UserTypeId] = @__UsertypeId_0
+2024-04-15 15:46:13.100 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-15 15:46:13.124 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 3815.4833ms
+2024-04-15 15:46:13.127 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 15:46:13.131 +05:30 [INF] HTTP POST /api/token/login responded 200 in 4022.4490 ms
+2024-04-15 15:46:13.145 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 47 - 200 - application/json;+charset=utf-8 4038.6079ms
+2024-04-15 15:47:46.341 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-15 15:47:46.348 +05:30 [INF] CORS policy execution successful.
+2024-04-15 15:47:46.348 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 1.9613 ms
+2024-04-15 15:47:46.349 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 8.0313ms
+2024-04-15 15:47:46.351 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 47
+2024-04-15 15:47:46.351 +05:30 [INF] CORS policy execution successful.
+2024-04-15 15:47:46.352 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 15:47:46.353 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-15 15:47:46.375 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-15 15:47:46.383 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-15 15:47:46.387 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__UsertypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserType]
+FROM [UserType] AS [u]
+WHERE [u].[UserTypeId] = @__UsertypeId_0
+2024-04-15 15:47:46.388 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-15 15:47:46.389 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 35.0727ms
+2024-04-15 15:47:46.390 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 15:47:46.391 +05:30 [INF] HTTP POST /api/token/login responded 200 in 39.5623 ms
+2024-04-15 15:47:46.393 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 47 - 200 - application/json;+charset=utf-8 42.2418ms
+2024-04-15 16:00:39.806 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-15 16:00:39.812 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:00:39.814 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 2.0412 ms
+2024-04-15 16:00:39.817 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 10.6826ms
+2024-04-15 16:00:39.821 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 47
+2024-04-15 16:00:39.821 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:00:39.823 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:00:39.824 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-15 16:00:39.886 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-15 16:00:39.918 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-15 16:00:39.924 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__UsertypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserType]
+FROM [UserType] AS [u]
+WHERE [u].[UserTypeId] = @__UsertypeId_0
+2024-04-15 16:00:39.926 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-15 16:00:39.927 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 99.7307ms
+2024-04-15 16:00:39.928 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:00:39.929 +05:30 [INF] HTTP POST /api/token/login responded 200 in 107.5539 ms
+2024-04-15 16:00:39.930 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 47 - 200 - application/json;+charset=utf-8 109.2464ms
+2024-04-15 16:18:59.754 +05:30 [INF] User profile is available. Using 'C:\Users\mirza\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-15 16:19:00.440 +05:30 [INF] Now listening on: https://localhost:7036
+2024-04-15 16:19:00.441 +05:30 [INF] Now listening on: http://localhost:5228
+2024-04-15 16:19:00.445 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-15 16:19:00.445 +05:30 [INF] Hosting environment: Development
+2024-04-15 16:19:00.446 +05:30 [INF] Content root path: C:\Users\mirza\Downloads\QuitQ_Ecom_I\QuitQ_Ecom\QuitQ_Ecom\
+2024-04-15 16:19:03.412 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - -
+2024-04-15 16:19:03.930 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - - - 200 - text/html;charset=utf-8 518.9571ms
+2024-04-15 16:19:03.935 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - -
+2024-04-15 16:19:03.935 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - -
+2024-04-15 16:19:03.945 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 10.0020ms
+2024-04-15 16:19:04.029 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 93.7103ms
+2024-04-15 16:19:04.074 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - -
+2024-04-15 16:19:04.309 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 235.6914ms
+2024-04-15 16:19:17.347 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-15 16:19:17.356 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:19:17.360 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 5.3710 ms
+2024-04-15 16:19:17.365 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 17.2479ms
+2024-04-15 16:19:17.367 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 47
+2024-04-15 16:19:17.369 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:19:17.472 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:19:17.531 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-15 16:19:19.418 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-15 16:19:20.803 +05:30 [INF] Executed DbCommand (276ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-15 16:19:21.011 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__UsertypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserType]
+FROM [UserType] AS [u]
+WHERE [u].[UserTypeId] = @__UsertypeId_0
+2024-04-15 16:19:21.293 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-15 16:19:21.306 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 3770.0699ms
+2024-04-15 16:19:21.308 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:19:21.312 +05:30 [INF] HTTP POST /api/token/login responded 200 in 3943.1010 ms
+2024-04-15 16:19:21.323 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 47 - 200 - application/json;+charset=utf-8 3956.2951ms
+2024-04-15 16:21:28.119 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-15 16:21:28.121 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:21:28.122 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 2.3928 ms
+2024-04-15 16:21:28.124 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 4.6074ms
+2024-04-15 16:21:28.125 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 47
+2024-04-15 16:21:28.126 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:21:28.127 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:21:28.127 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-15 16:21:28.141 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-15 16:21:28.166 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-15 16:21:28.171 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__UsertypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserType]
+FROM [UserType] AS [u]
+WHERE [u].[UserTypeId] = @__UsertypeId_0
+2024-04-15 16:21:28.173 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-15 16:21:28.174 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 45.5911ms
+2024-04-15 16:21:28.175 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:21:28.176 +05:30 [INF] HTTP POST /api/token/login responded 200 in 49.7331 ms
+2024-04-15 16:21:28.177 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 47 - 200 - application/json;+charset=utf-8 51.3308ms
+2024-04-15 16:22:34.193 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-15 16:22:34.199 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:22:34.199 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 0.4897 ms
+2024-04-15 16:22:34.200 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 7.3927ms
+2024-04-15 16:22:34.206 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 47
+2024-04-15 16:22:34.207 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:22:34.209 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:22:34.210 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-15 16:22:34.267 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-15 16:22:34.274 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-15 16:22:34.277 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__UsertypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserType]
+FROM [UserType] AS [u]
+WHERE [u].[UserTypeId] = @__UsertypeId_0
+2024-04-15 16:22:34.278 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-15 16:22:34.280 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 67.7767ms
+2024-04-15 16:22:34.281 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:22:34.281 +05:30 [INF] HTTP POST /api/token/login responded 200 in 74.6641 ms
+2024-04-15 16:22:34.283 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 47 - 200 - application/json;+charset=utf-8 77.0595ms
+2024-04-15 16:23:18.245 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-15 16:23:18.250 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:23:18.252 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 1.3861 ms
+2024-04-15 16:23:18.253 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 8.0134ms
+2024-04-15 16:23:18.260 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 47
+2024-04-15 16:23:18.261 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:23:18.262 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:23:18.263 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-15 16:23:18.264 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-15 16:23:18.269 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-15 16:23:18.274 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__UsertypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserType]
+FROM [UserType] AS [u]
+WHERE [u].[UserTypeId] = @__UsertypeId_0
+2024-04-15 16:23:18.276 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-15 16:23:18.277 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 13.6961ms
+2024-04-15 16:23:18.278 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:23:18.279 +05:30 [INF] HTTP POST /api/token/login responded 200 in 17.2377 ms
+2024-04-15 16:23:18.280 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 47 - 200 - application/json;+charset=utf-8 19.1251ms
+2024-04-15 16:23:43.892 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-15 16:23:43.898 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:23:43.900 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 2.8449 ms
+2024-04-15 16:23:43.902 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 10.3570ms
+2024-04-15 16:23:43.904 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 47
+2024-04-15 16:23:43.904 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:23:43.905 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:23:43.906 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-15 16:23:43.908 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-15 16:23:43.921 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-15 16:23:43.926 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__UsertypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserType]
+FROM [UserType] AS [u]
+WHERE [u].[UserTypeId] = @__UsertypeId_0
+2024-04-15 16:23:43.928 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-15 16:23:43.929 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 21.6011ms
+2024-04-15 16:23:43.930 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:23:43.930 +05:30 [INF] HTTP POST /api/token/login responded 200 in 26.2221 ms
+2024-04-15 16:23:43.932 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 47 - 200 - application/json;+charset=utf-8 28.4112ms
+2024-04-15 16:52:05.718 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7036/api/token/login - -
+2024-04-15 16:52:05.723 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:52:05.724 +05:30 [INF] HTTP OPTIONS /api/token/login responded 204 in 0.7108 ms
+2024-04-15 16:52:05.725 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7036/api/token/login - - - 204 - - 7.2591ms
+2024-04-15 16:52:05.733 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7036/api/token/login application/json 47
+2024-04-15 16:52:05.734 +05:30 [INF] CORS policy execution successful.
+2024-04-15 16:52:05.737 +05:30 [INF] Executing endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:52:05.738 +05:30 [INF] Route matched with {action = "Post", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(QuitQ_Ecom.DTOs.LoginDTO) on controller QuitQ_Ecom.Controllers.TokenController (QuitQ_Ecom).
+2024-04-15 16:52:05.771 +05:30 [INF] Entity Framework Core 6.0.28 initialized 'QuitQEcomContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+2024-04-15 16:52:05.874 +05:30 [INF] Executed DbCommand (73ms) [Parameters=[@__8__locals1_username_0='?' (Size = 100) (DbType = AnsiString), @__hashedpassword_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[ContactNumber], [u].[Dob], [u].[Email], [u].[FirstName], [u].[GenderId], [u].[LastName], [u].[Password], [u].[UserStatusId], [u].[UserTypeId], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__8__locals1_username_0) AND ([u].[Password] = @__hashedpassword_1)
+2024-04-15 16:52:05.885 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__UsertypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserType]
+FROM [UserType] AS [u]
+WHERE [u].[UserTypeId] = @__UsertypeId_0
+2024-04-15 16:52:05.888 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-04-15 16:52:05.890 +05:30 [INF] Executed action QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom) in 150.2914ms
+2024-04-15 16:52:05.891 +05:30 [INF] Executed endpoint 'QuitQ_Ecom.Controllers.TokenController.Post (QuitQ_Ecom)'
+2024-04-15 16:52:05.892 +05:30 [INF] HTTP POST /api/token/login responded 200 in 157.7215 ms
+2024-04-15 16:52:05.893 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7036/api/token/login application/json 47 - 200 - application/json;+charset=utf-8 159.9413ms

@@ -1,0 +1,25 @@
+#main_contact{
+    /* border: 2px solid black; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contact_heading{
+    font-size: 2em;
+}
+.contact_form{
+    display: flex;
+    flex-direction: column;
+
+    
+    /* border: 2px solid black;  */
+      
+}
+.contact_inputs{
+    border: 2px solid black;
+    margin: 2px;
+    width: 100%;
+}

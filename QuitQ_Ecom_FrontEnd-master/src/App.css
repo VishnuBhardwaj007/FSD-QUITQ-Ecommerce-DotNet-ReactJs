@@ -1,0 +1,43 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* margin-left:  6px; */
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid black; */
+  background-color: #efefef;
+}
+
+
+
+/* body section */
+main{
+  /* border: 2px solid red; */
+  flex: 1;
+  display: flex;
+  width: 100%;
+}
+.main_div{
+  flex: 1;
+  
+  /* border: 2px solid yellow; */
+}
+
+/* footer section */
+footer{
+  text-align: center;
+  background-color: #efefef;
+}
+#dark_mode{
+  background-color: black;
+  color: white;
+}
+#white_mode{
+  background-color: white;
+  color: black;
+}
+

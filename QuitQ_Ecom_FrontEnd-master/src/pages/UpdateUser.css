@@ -1,0 +1,34 @@
+/* UpdateUser.css */
+
+.update-user-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.update-user-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.ant-form-item-label {
+  text-align: left;
+}
+
+.ant-input {
+  border-radius: 4px;
+}
+
+
+
+.ant-btn {
+  width: 100%;
+}
